@@ -1,10 +1,12 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export function Footer() {
+  const [interest, setInterest] = useState("buy");
+
   return (
     <footer className="bg-gray-100 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4">
@@ -64,20 +66,24 @@ export function Footer() {
               </div>
               <div>
                 <Label>Interested in</Label>
-                <RadioGroup defaultValue="buy" className="flex gap-4 mt-2">
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="buy" id="buy" />
-                    <Label htmlFor="buy">Buy</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="rent" id="rent" />
-                    <Label htmlFor="rent">Rent</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="other" id="other" />
-                    <Label htmlFor="other">Other</Label>
-                  </div>
-                </RadioGroup>
+                <div className="flex gap-4 mt-2">
+                  {["buy", "rent", "other"].map((option) => (
+                    <div key={option} className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        id={option}
+                        name="interest"
+                        value={option}
+                        checked={interest === option}
+                        onChange={(e) => setInterest(e.target.value)}
+                        className="text-primary"
+                      />
+                      <Label htmlFor={option} className="capitalize">
+                        {option}
+                      </Label>
+                    </div>
+                  ))}
+                </div>
               </div>
               <Button type="submit" className="w-full">Submit</Button>
             </form>
