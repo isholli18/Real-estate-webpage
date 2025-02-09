@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import FeaturedProperties from "@/components/properties/featured-properties";
 import { Services } from "@/components/home/services";
 import { KeyAdvantages } from "@/components/home/key-advantages";
+import { DiscoverAlbania } from "@/components/home/discover-albania";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
@@ -53,6 +54,9 @@ export default function Home() {
 
       {/* Key Advantages */}
       <KeyAdvantages />
+
+      {/* Discover Albania */}
+      <DiscoverAlbania />
 
       {/* Agents Section */}
       <section className="py-20">
