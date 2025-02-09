@@ -3,6 +3,7 @@ import FeaturedProperties from "@/components/properties/featured-properties";
 import { Services } from "@/components/home/services";
 import { KeyAdvantages } from "@/components/home/key-advantages";
 import { DiscoverAlbania } from "@/components/home/discover-albania";
+import { WhyChooseUs } from "@/components/home/why-choose-us";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
@@ -57,6 +58,9 @@ export default function Home() {
 
       {/* Discover Albania */}
       <DiscoverAlbania />
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
 
       {/* Agents Section */}
       <section className="py-20">
