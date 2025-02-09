@@ -53,18 +53,3 @@ export const mockAgents = [
     phone: "(555) 987-6543"
   }
 ];
-
-// Initialize mock data
-import { storage } from "@/server/storage";
-
-export async function initializeMockData() {
-  const properties = await storage.getProperties();
-  if (properties.length === 0) {
-    for (const property of mockProperties) {
-      await storage.createProperty(property);
-    }
-    for (const agent of mockAgents) {
-      await storage.createAgent(agent);
-    }
-  }
-}

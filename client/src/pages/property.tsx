@@ -130,26 +130,42 @@ export default function Property() {
             <DialogTitle>Request Information</DialogTitle>
           </DialogHeader>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <Input
-              placeholder="Name"
-              {...form.register("name")}
-              error={form.formState.errors.name?.message}
-            />
-            <Input
-              placeholder="Email"
-              {...form.register("email")}
-              error={form.formState.errors.email?.message}
-            />
-            <Input
-              placeholder="Phone"
-              {...form.register("phone")}
-              error={form.formState.errors.phone?.message}
-            />
-            <Textarea
-              placeholder="Message"
-              {...form.register("message")}
-              error={form.formState.errors.message?.message}
-            />
+            <div className="space-y-2">
+              <Input
+                placeholder="Name"
+                {...form.register("name")}
+              />
+              {form.formState.errors.name && (
+                <p className="text-sm text-red-500">{form.formState.errors.name.message}</p>
+              )}
+            </div>
+            <div className="space-y-2">
+              <Input
+                placeholder="Email"
+                {...form.register("email")}
+              />
+              {form.formState.errors.email && (
+                <p className="text-sm text-red-500">{form.formState.errors.email.message}</p>
+              )}
+            </div>
+            <div className="space-y-2">
+              <Input
+                placeholder="Phone"
+                {...form.register("phone")}
+              />
+              {form.formState.errors.phone && (
+                <p className="text-sm text-red-500">{form.formState.errors.phone.message}</p>
+              )}
+            </div>
+            <div className="space-y-2">
+              <Textarea
+                placeholder="Message"
+                {...form.register("message")}
+              />
+              {form.formState.errors.message && (
+                <p className="text-sm text-red-500">{form.formState.errors.message.message}</p>
+              )}
+            </div>
             <Button type="submit" className="w-full">
               Send Inquiry
             </Button>

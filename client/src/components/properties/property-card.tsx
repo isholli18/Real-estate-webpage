@@ -1,6 +1,8 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { type Property } from "@shared/schema";
 import { Bed, Bath, ArrowUpRight, Square } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Link } from "wouter";
 
 interface PropertyCardProps {
   property: Property;
