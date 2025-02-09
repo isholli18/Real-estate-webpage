@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import FeaturedProperties from "@/components/properties/featured-properties";
+import { Services } from "@/components/home/services";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
@@ -44,6 +45,9 @@ export default function Home() {
           <FeaturedProperties />
         </div>
       </section>
+
+      {/* Services Section */}
+      <Services />
 
       {/* Agents Section */}
       <section className="py-20">
