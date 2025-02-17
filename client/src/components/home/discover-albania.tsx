@@ -5,8 +5,8 @@ import { Card } from "@/components/ui/card";
 
 const albanianLocations = [
   {
-    image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a",
-    title: "Butrint Ancient City",
+    image: "https://veronikasadventure.com/wp-content/uploads/2024/07/albania-jeep-tour-to-cape-rodon-bay-with-lunchwinetasting-fullday-from-tirana-2.jpg",
+    title: "Air Albania Stadium",
     description: "UNESCO World Heritage site"
   },
   {

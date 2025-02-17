@@ -22,20 +22,20 @@ export function Footer() {
           <div className="text-center">
             <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Call Us</h3>
-            <p className="text-sm text-gray-600">Free Calls</p>
-            <p className="text-sm">1-800-000-000</p>
+            <p className="text-sm text-gray-600">Don't hesitate</p>
+            <p className="text-sm">(+355) 69 44 38 208</p>
           </div>
           <div className="text-center">
             <MapPin className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Find Us</h3>
-            <p className="text-sm text-gray-600">500 Terry Francine St.</p>
-            <p className="text-sm">San Francisco, CA 94158</p>
+            <p className="text-sm text-gray-600">Our Address</p>
+            <p className="text-sm">Tirane, Albania</p>
           </div>
           <div className="text-center">
             <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="font-semibold mb-2">Email Us</h3>
             <p className="text-sm text-gray-600">Direct Email</p>
-            <p className="text-sm">info@mysite.com</p>
+            <p className="text-sm">ssinvestmentbrokeralbania@hotmail.com</p>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-600 mt-16">
-          <p>© 2024 LuxEstate. All rights reserved.</p>
+          <p>© 2024 SSInvestmentBroker. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -10,11 +10,11 @@ export default function About() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* About Section */}
       <section className="mb-20">
-        <h1 className="text-4xl font-bold mb-8">About LuxEstate</h1>
+        <h1 className="text-4xl font-bold mb-8">About SSInvestmentBroker</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-600 mb-6">
-              LuxEstate is the premier destination for luxury real estate,
+              SSInvestmentBroker is the premier destination for luxury real estate,
               offering an unparalleled portfolio of exceptional properties and
               personalized service that exceeds expectations.
             </p>

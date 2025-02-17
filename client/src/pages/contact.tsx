@@ -71,8 +71,7 @@ export default function Contact() {
             <div>
               <h3 className="font-semibold mb-2">Office Location</h3>
               <p className="text-gray-600">
-                123 Luxury Lane<br />
-                Beverly Hills, CA 90210
+                Tirana, Albania
               </p>
             </div>
           </div>
@@ -81,7 +80,7 @@ export default function Contact() {
             <Phone className="h-6 w-6 text-primary flex-shrink-0" />
             <div>
               <h3 className="font-semibold mb-2">Phone</h3>
-              <p className="text-gray-600">(555) 123-4567</p>
+              <p className="text-gray-600">(+355) 69 44 38 208</p>
             </div>
           </div>
 
@@ -89,7 +88,7 @@ export default function Contact() {
             <Mail className="h-6 w-6 text-primary flex-shrink-0" />
             <div>
               <h3 className="font-semibold mb-2">Email</h3>
-              <p className="text-gray-600">contact@luxestate.com</p>
+              <p className="text-gray-600">ssinvestmentbrokeralbania@hotmail.com</p>
             </div>
           </div>
 

@@ -18,7 +18,7 @@ export function Navbar() {
           <div className="flex">
             <Link href="/">
               <a className="flex items-center">
-                <span className="text-xl font-bold text-primary">LuxEstate</span>
+                <span className="text-xl font-bold text-primary">SSInvestmentBroker</span>
               </a>
             </Link>
           </div>

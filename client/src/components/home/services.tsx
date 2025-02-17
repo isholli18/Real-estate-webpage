@@ -18,7 +18,7 @@ const services: Service[] = [
   {
     icon: Search,
     title: "Property Search",
-    subtitle: "Finding Your Ideal Home",
+    subtitle: "Finding Your Ideal Property",
     description: "Comprehensive search to find properties that match your criteria"
   },
   {

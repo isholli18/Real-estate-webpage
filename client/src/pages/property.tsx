@@ -112,11 +112,11 @@ export default function Property() {
               <div className="text-sm text-gray-600">
                 <div className="flex items-center mb-2">
                   <Mail className="h-4 w-4 mr-2" />
-                  contact@luxestate.com
+                  ssinvestmentbrokeralbania@hotmail.com
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-4 w-4 mr-2" />
-                  (555) 123-4567
+                  (+355) 69 44 38 208
                 </div>
               </div>
             </CardContent>
