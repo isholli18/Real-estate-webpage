@@ -27,9 +27,9 @@ export interface Inquiry {
   id: number;
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
-  propertyId?: number;
+  propertyId?: number | null;
   createdAt?: Date;
 }
 

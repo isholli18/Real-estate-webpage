@@ -19,7 +19,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { mockProperties } from "@/lib/propertyData";
+// import { mockProperties } from "@/lib/propertyData";
+import { data_properties } from "@server/data";
 
 export default function Property() {
   const { id } = useParams();
@@ -32,7 +33,7 @@ export default function Property() {
   // });
 
    // Use mockProperties to find the property by ID
-   const property = mockProperties.find((p) => p.id === Number(id));
+   const property = data_properties.find((p) => p.id === Number(id));
 
   const form = useForm({
     resolver: zodResolver(insertInquirySchema),
