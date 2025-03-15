@@ -2,21 +2,25 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Card } from "@/components/ui/card";
+import airAlbania from '@/images/air_albania.jpg';
+import gjirokaster from '@/images/Gjirokaster-bazaar.jpg';
+import korce from '@/images/Korce-Albania.jpg';
+
 
 const albanianLocations = [
   {
-    image: "https://veronikasadventure.com/wp-content/uploads/2024/07/albania-jeep-tour-to-cape-rodon-bay-with-lunchwinetasting-fullday-from-tirana-2.jpg",
+    image: airAlbania,
     title: "Air Albania Stadium",
     description: "UNESCO World Heritage site"
   },
   {
-    image: "https://images.unsplash.com/photo-1592486058517-36236ba247c8",
-    title: "Albanian Riviera",
+    image: korce,
+    title: "Korce Albania",
     description: "Crystal clear waters"
   },
   {
-    image: "https://images.unsplash.com/photo-1620127252536-03bdfcf6d5c3",
-    title: "Berat Old Town",
+    image: gjirokaster,
+    title: "Gjirokastra Old Town",
     description: "City of a thousand windows"
   },
   {

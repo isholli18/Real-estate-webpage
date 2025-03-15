@@ -1,64 +1,77 @@
-import { type Property, type InsertProperty, type Agent, type InsertAgent, type Inquiry, type InsertInquiry } from "@shared/schema";
-import { properties, agents, inquiries } from "@shared/schema";
-import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { data_properties, agents } from "./data";
+
+export interface Property {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  bedrooms: number;
+  bathrooms: number;
+  sqft: number;
+  address: string;
+  images: string[];
+  featured: number;
+}
+
+export interface Agent {
+  id: number;
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  email: string;
+  phone: string;
+}
+
+export interface Inquiry {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  propertyId?: number;
+  createdAt?: Date;
+}
 
 export interface IStorage {
-  // Properties
   getProperties(): Promise<Property[]>;
   getProperty(id: number): Promise<Property | undefined>;
   getFeaturedProperties(): Promise<Property[]>;
-  createProperty(property: InsertProperty): Promise<Property>;
-
-  // Agents
   getAgents(): Promise<Agent[]>;
   getAgent(id: number): Promise<Agent | undefined>;
-  createAgent(agent: InsertAgent): Promise<Agent>;
-
-  // Inquiries
-  createInquiry(inquiry: InsertInquiry): Promise<Inquiry>;
+  createInquiry(inquiry: Omit<Inquiry, "id" | "createdAt">): Promise<Inquiry>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class StaticStorage implements IStorage {
+  private inquiryId = 1;
+
   async getProperties(): Promise<Property[]> {
-    return await db.select().from(properties);
+    return data_properties;
   }
 
   async getProperty(id: number): Promise<Property | undefined> {
-    const [property] = await db.select().from(properties).where(eq(properties.id, id));
-    return property;
+    return data_properties.find(p => p.id === id);
   }
 
   async getFeaturedProperties(): Promise<Property[]> {
-    return await db.select().from(properties).where(eq(properties.featured, 1));
-  }
-
-  async createProperty(property: InsertProperty): Promise<Property> {
-    const [newProperty] = await db.insert(properties).values(property).returning();
-    return newProperty;
+    return data_properties.filter(p => p.featured === 1);
   }
 
   async getAgents(): Promise<Agent[]> {
-    return await db.select().from(agents);
+    return agents;
   }
 
   async getAgent(id: number): Promise<Agent | undefined> {
-    const [agent] = await db.select().from(agents).where(eq(agents.id, id));
-    return agent;
+    return agents.find(a => a.id === id);
   }
 
-  async createAgent(agent: InsertAgent): Promise<Agent> {
-    const [newAgent] = await db.insert(agents).values(agent).returning();
-    return newAgent;
-  }
-
-  async createInquiry(inquiry: InsertInquiry): Promise<Inquiry> {
-    const [newInquiry] = await db.insert(inquiries).values({
+  async createInquiry(inquiry: Omit<Inquiry, "id" | "createdAt">): Promise<Inquiry> {
+    return {
+      id: this.inquiryId++,
       ...inquiry,
-      propertyId: inquiry.propertyId || null,
-    }).returning();
-    return newInquiry;
+      createdAt: new Date()
+    };
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new StaticStorage();

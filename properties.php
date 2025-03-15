@@ -1,6 +1,6 @@
 
 <?php
-require_once 'config/database.php';
+#require_once 'config/database.php';
 require_once 'includes/functions.php';
 
 $search = isset($_GET['search']) ? $_GET['search'] : '';

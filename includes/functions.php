@@ -1,22 +1,28 @@
-
 <?php
+require_once 'includes/data.php';
+
 function getFeaturedProperties() {
-    global $pdo;
-    $stmt = $pdo->query("SELECT * FROM properties WHERE featured = 1");
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    global $properties;
+    return array_filter($properties, function($property) {
+        return $property['featured'] == 1;
+    });
 }
 
 function getProperty($id) {
-    global $pdo;
-    $stmt = $pdo->prepare("SELECT * FROM properties WHERE id = ?");
-    $stmt->execute([$id]);
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    global $properties;
+    foreach ($properties as $property) {
+        if ($property['id'] == $id) {
+            return $property;
+        }
+    }
+    return null;
 }
 
 function searchProperties($search) {
-    global $pdo;
-    $search = "%$search%";
-    $stmt = $pdo->prepare("SELECT * FROM properties WHERE title LIKE ? OR location LIKE ?");
-    $stmt->execute([$search, $search]);
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    global $properties;
+    $search = strtolower($search);
+    return array_filter($properties, function($property) use ($search) {
+        return strpos(strtolower($property['title']), $search) !== false ||
+               strpos(strtolower($property['location']), $search) !== false;
+    });
 }

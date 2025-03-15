@@ -3,10 +3,12 @@ import PropertySearch from "@/components/properties/property-search";
 import { PropertyCard } from "@/components/properties/property-card";
 import { type Property } from "@shared/schema";
 import { useState } from "react";
+import { mockProperties } from "@/lib/propertyData";
 
 export default function Properties() {
   const { data: properties, isLoading } = useQuery<Property[]>({
     queryKey: ["/api/properties"],
+    queryFn: () => Promise.resolve(mockProperties.filter(property => property.featured === 1)),
   });
 
   const [filters, setFilters] = useState({

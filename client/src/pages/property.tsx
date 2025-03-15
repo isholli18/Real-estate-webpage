@@ -19,15 +19,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { mockProperties } from "@/lib/propertyData";
 
 export default function Property() {
   const { id } = useParams();
   const [inquiryOpen, setInquiryOpen] = useState(false);
   const { toast } = useToast();
 
-  const { data: property, isLoading } = useQuery<Property>({
-    queryKey: [`/api/properties/${id}`],
-  });
+  //changed to read from monckProperties
+  // const { data: property, isLoading } = useQuery<Property>({
+  //   queryKey: [`/api/properties/${id}`],
+  // });
+
+   // Use mockProperties to find the property by ID
+   const property = mockProperties.find((p) => p.id === Number(id));
 
   const form = useForm({
     resolver: zodResolver(insertInquirySchema),
@@ -57,9 +62,9 @@ export default function Property() {
     }
   };
 
-  if (isLoading) {
-    return <div className="h-96 animate-pulse bg-gray-100" />;
-  }
+  // if (isLoading) {
+  //   return <div className="h-96 animate-pulse bg-gray-100" />;
+  // }
 
   if (!property) {
     return <div>Property not found</div>;

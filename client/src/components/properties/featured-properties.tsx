@@ -1,10 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { PropertyCard } from "./property-card";
-import type { Property } from "@shared/schema";
+import type { Property } from "@shared/schema.ts";
+//import { mockProperties } from "@/lib/propertyData";
+import { data_properties } from "../../../../server/data";
 
 export default function FeaturedProperties() {
   const { data: properties, isLoading } = useQuery<Property[]>({
     queryKey: ["/api/properties/featured"],
+    queryFn: () => Promise.resolve(data_properties.filter(property => property.featured === 1)),
   });
 
   if (isLoading) {
