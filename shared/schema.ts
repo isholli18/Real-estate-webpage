@@ -5,10 +5,10 @@ export const propertySchema = z.object({
   id: z.number(),
   title: z.string(),
   description: z.string(),
-  price: z.number(),
+  price: z.string(),
   bedrooms: z.number(),
   bathrooms: z.number(),
-  sqft: z.number(),
+  m2: z.number(),
   address: z.string(),
   images: z.array(z.string()),
   featured: z.number()

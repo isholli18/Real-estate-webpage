@@ -12,7 +12,7 @@ interface PropertyCardProps {
 export function PropertyCard({ property, featured }: PropertyCardProps) {
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'EUR',
     minimumFractionDigits: 0,
   });
 
@@ -36,7 +36,7 @@ export function PropertyCard({ property, featured }: PropertyCardProps) {
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-2">{property.title}</h3>
         <p className="text-2xl font-bold text-primary mb-4">
-          {formatter.format(property.price)}
+        {formatter.format(parseFloat(property.price))}
         </p>
         <p className="text-gray-600 mb-4">{property.address}</p>
         <div className="flex gap-4 text-gray-500">
@@ -50,7 +50,7 @@ export function PropertyCard({ property, featured }: PropertyCardProps) {
           </div>
           <div className="flex items-center gap-1">
             <Square className="h-4 w-4" />
-            <span>{property.sqft} sqft</span>
+            <span>{property.m2} m2</span>
           </div>
         </div>
       </CardContent>

@@ -103,7 +103,7 @@ export default function Property() {
                 <div className="text-center">
                   <Square className="h-6 w-6 mx-auto mb-2" />
                   <div className="text-sm text-gray-600">
-                    {property.sqft} sqft
+                    {property.m2} m2
                   </div>
                 </div>
               </div>

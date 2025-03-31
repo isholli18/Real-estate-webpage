@@ -6,7 +6,7 @@ export const mockProperties = [
     price: 2500000,
     bedrooms: 5,
     bathrooms: 4,
-    sqft: 4500,
+    m2: 4500,
     address: "123 Ocean Drive, Miami Beach, FL",
     images: [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
@@ -22,7 +22,7 @@ export const mockProperties = [
     price: 3200000,
     bedrooms: 6,
     bathrooms: 5,
-    sqft: 5200,
+    m2: 5200,
     address: "456 Mountain View Rd, Aspen, CO",
     images: [
       "https://images.unsplash.com/photo-1513584684374-8bab748fbf90",

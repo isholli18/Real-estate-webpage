@@ -4,10 +4,10 @@ export interface Property {
   id: number;
   title: string;
   description: string;
-  price: number;
+  price: string;
   bedrooms: number;
   bathrooms: number;
-  sqft: number;
+  m2: number;
   address: string;
   images: string[];
   featured: number;

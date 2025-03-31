@@ -1,6 +1,5 @@
-
 <?php
-#require_once 'config/database.php';
+require_once 'config/database.php';
 require_once 'includes/functions.php';
 $properties = getFeaturedProperties();
 ?>
@@ -18,12 +17,6 @@ $properties = getFeaturedProperties();
     <main>
         <section class="hero">
             <h1>Find Your Dream Property in Albania</h1>
-            <div class="search-container">
-                <form action="properties.php" method="GET">
-                    <input type="text" name="search" placeholder="Search properties...">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
         </section>
 
         <section class="featured-properties">
