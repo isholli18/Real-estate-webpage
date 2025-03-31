@@ -34,7 +34,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section 
       <section>
         <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -55,7 +55,7 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section>*/}
     </div>
   );
 }
