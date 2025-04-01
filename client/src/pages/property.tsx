@@ -73,10 +73,11 @@ export default function Property() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mt-8 mb-4">{property.title}</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <ImageGallery images={property.images} />
-          <h1 className="text-3xl font-bold mt-8 mb-4">{property.title}</h1>
+          <h1 className="text-3xl font-bold mt-8 mb-4">Property Description</h1>
           <p className="text-gray-600 mb-8">{property.description}</p>
         </div>
 

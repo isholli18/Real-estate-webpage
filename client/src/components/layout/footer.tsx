@@ -92,7 +92,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-600 mt-16">
-          <p>© 2024 SSInvestmentBroker. All rights reserved.</p>
+          <p>© 2025 SSInvestmentBroker. All rights reserved.</p>
         </div>
       </div>
     </footer>

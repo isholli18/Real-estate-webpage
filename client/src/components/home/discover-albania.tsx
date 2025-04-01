@@ -5,33 +5,47 @@ import { Card } from "@/components/ui/card";
 import airAlbania from '@/images/air_albania.jpg';
 import gjirokaster from '@/images/Gjirokaster-bazaar.jpg';
 import korce from '@/images/Korce-Albania.jpg';
+import kep_merli from '@/images/kep_merli.jpg';
+import tirana from '@/images/Tirana.jpg';
+import ksamil from '@/images/ksamilit.jpg';
+import theth from '@/images/theth.jpg';
 
 
 const albanianLocations = [
   {
     image: airAlbania,
     title: "Air Albania Stadium",
-    description: "UNESCO World Heritage site"
+    description: "Newest stadium in Tirana city"
+  },
+  {
+    image: tirana,
+    title: "The Capital city",
+    description: "A vibrant and dynamic city that is never quiet"
   },
   {
     image: korce,
     title: "Korce Albania",
-    description: "Crystal clear waters"
+    description: "Little Paris of Albania"
   },
   {
     image: gjirokaster,
     title: "Gjirokastra Old Town",
-    description: "City of a thousand windows"
+    description: "UNESCO-listed gem, known for its well-preserved Ottoman-era stone houses, cobbled streets, and its rich and old culture"
   },
   {
-    image: "https://images.unsplash.com/photo-1634416411623-7082a926b59f",
+    image: kep_merli,
+    title: "Kep Merli",
+    description: "Secluded paradise with breathtaking views and pristine waters"
+  },
+  {
+    image: ksamil,
+    title: "Ksamil Bay",
+    description: "Crystal-clear turquoise waters, white sandy beaches, the Maldives of Europe"
+  },
+  {
+    image: theth,
     title: "Theth National Park",
-    description: "Stunning mountain landscapes"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1601581875039-e899893d520c",
-    title: "Kruja Castle",
-    description: "Historical fortress"
+    description: "A paradise for hikers and nature lovers, Theth offers breathtaking trails, waterfalls, and the iconic Blue Eye, making it a must-visit destination for adventure seekers"
   }
 ];
 

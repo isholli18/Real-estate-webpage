@@ -25,7 +25,7 @@ $properties = $search ? searchProperties($search) : getFeaturedProperties();
                     <div class="property-card">
                         <img src="<?php echo htmlspecialchars($property['image_url']); ?>" alt="<?php echo htmlspecialchars($property['title']); ?>">
                         <h3><?php echo htmlspecialchars($property['title']); ?></h3>
-                        <p class="price">€<?php echo number_format($property['price']); ?></p>
+                        <p class="price"><?php echo htmlspecialchars($property['price']); ?></p>
                         <p class="location"><?php echo htmlspecialchars($property['location']); ?></p>
                         <a href="property.php?id=<?php echo $property['id']; ?>" class="btn">View Details</a>
                     </div>

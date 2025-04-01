@@ -14,19 +14,23 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-600 mb-6">
-              SSInvestmentBroker is the premier destination for luxury real estate,
-              offering an unparalleled portfolio of exceptional properties and
-              personalized service that exceeds expectations.
+            At SSInvestmentBroker, we specialize in finding unique and high-value properties across Albania, 
+            from premium investment-free parcels in the stunning Riviera to luxurious modern developments under construction or already constructed. 
+            Whether you are looking for a dream home or a profitable investment, we provide exclusive opportunities in the country’s most desirable places.
+            We are committed to offering security and transparency throughout every step of the property-buying process, 
+            ensuring that all transactions are fully compliant with legal regulations.
             </p>
             <p className="text-lg text-gray-600">
-              Our team of experienced professionals is dedicated to helping you
-              find your perfect home or investment property, with a deep
-              understanding of the luxury market and a commitment to excellence.
+            Our experienced team provides personalized guidance and dedicated customer support, 
+            making your journey to purchasing property in Albania smooth and worry-free.
+            Let us help you discover the best real estate opportunities in one of Europe’s most exciting 
+            and fast-growing markets—where breathtaking landscapes meet exceptional investment potential.
+
             </p>
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e"
+              src="https://img.freepik.com/free-vector/real-estate-searching_52683-46407.jpg"
               alt="Office"
               className="rounded-lg shadow-lg"
             />

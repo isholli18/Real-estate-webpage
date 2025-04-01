@@ -5,9 +5,9 @@ export interface Property {
   title: string;
   description: string;
   price: string;
-  bedrooms: number;
-  bathrooms: number;
-  m2: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  m2: number | null;
   address: string;
   images: string[];
   featured: number;

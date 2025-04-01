@@ -4,12 +4,12 @@ import { z } from "zod";
 export const propertySchema = z.object({
   id: z.number(),
   title: z.string(),
-  description: z.string(),
-  price: z.string(),
-  bedrooms: z.number(),
-  bathrooms: z.number(),
-  m2: z.number(),
-  address: z.string(),
+  description: z.string().nullable(),
+  price: z.string().nullable(),
+  bedrooms: z.number().nullable(),
+  bathrooms: z.number().nullable(),
+  m2: z.number().nullable(),
+  address: z.string().nullable(),
   images: z.array(z.string()),
   featured: z.number()
 });
@@ -30,7 +30,7 @@ export const inquirySchema = z.object({
   name: z.string(),
   email: z.string().email(),
   message: z.string(),
-  propertyId: z.number().nullable(),
+  propertyId: z.number(),
   createdAt: z.date()
 });
 

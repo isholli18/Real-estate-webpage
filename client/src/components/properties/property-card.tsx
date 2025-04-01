@@ -35,11 +35,11 @@ export function PropertyCard({ property, featured }: PropertyCardProps) {
       </CardContent>
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-2">{property.title}</h3>
-        <p className="text-2xl font-bold text-primary mb-4">
-        {formatter.format(parseFloat(property.price))}
+        <p className="text-xl font-semibold mb-2 h-14 line-clamp-2">
+        {formatter.format(Number(property.price?.replace(/[^0-9.-]+/g, '').replace(/²/g, '') || '0') || 0)}
         </p>
         <p className="text-gray-600 mb-4">{property.address}</p>
-        <div className="flex gap-4 text-gray-500">
+        <div className="flex gap-4 text-gray-500 mb-4">
           <div className="flex items-center gap-1">
             <Bed className="h-4 w-4" />
             <span>{property.bedrooms}</span>
@@ -53,13 +53,11 @@ export function PropertyCard({ property, featured }: PropertyCardProps) {
             <span>{property.m2} m2</span>
           </div>
         </div>
-      </CardContent>
-      <CardFooter className="px-6 py-4 bg-gray-50">
-        <Link href={`/property/${property.id}`} className="flex items-center text-primary hover:underline">
+      <Link href={`/property/${property.id}`} className="w-full flex items-center justify-center bg-primary text-white py-2 rounded-md hover:bg-primary/90 transition-colors">
           View Details
           <ArrowUpRight className="ml-2 h-4 w-4" />
         </Link>
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 }
