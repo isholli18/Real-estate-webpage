@@ -3,13 +3,20 @@ import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer, createLogger } from "vite";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
+//import { Express } from 'express';
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const viteLogger = createLogger();
+
+// Helper function to determine if it's production
+function isProduction() {
+  return process.env.NODE_ENV === 'production';
+}
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -26,7 +33,9 @@ export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
-    allowedHosts: true,
+    allowedHosts: isProduction()
+      ? ['example.com', 'www.example.com']  // Only allow these hosts in production
+      : undefined,  // Allow all hosts in development
   };
 
   const vite = await createViteServer({
