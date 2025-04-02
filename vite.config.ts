@@ -4,11 +4,19 @@ import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path, { dirname } from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 export default defineConfig({
   plugins: [react(), runtimeErrorOverlay(), themePlugin()],
+  css: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer],
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
@@ -16,9 +24,10 @@ export default defineConfig({
       "@server": path.resolve(__dirname, "server"),
     },
   },
-  root: path.resolve(__dirname, "client"),
+  base: "./", // 👈 Ensures GitHub Pages uses relative paths
+  root: path.resolve(__dirname, "client/src"), // 👈 Dev server starts from /client
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"), // 👈 Builds into /dist (not /dist/public)
     emptyOutDir: true,
   },
 });
