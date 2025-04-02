@@ -25,7 +25,7 @@ export default defineConfig({
     },
   },
   base: "./", // 👈 Ensures GitHub Pages uses relative paths
-  root: path.resolve(__dirname, "client/src"), // 👈 Dev server starts from /client
+  root: path.resolve(__dirname, "client"), // 👈 Dev server starts from /client
   build: {
     outDir: path.resolve(__dirname, "dist"), // 👈 Builds into /dist (not /dist/public)
     emptyOutDir: true,
