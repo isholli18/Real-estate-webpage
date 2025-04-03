@@ -34,7 +34,7 @@ export async function setupVite(app: Express, server: Server) {
     middlewareMode: true,
     hmr: { server },
     allowedHosts: isProduction()
-      ? ['example.com', 'www.example.com']  // Only allow these hosts in production
+      ? ['example.com', 'www.example.com', 'https://albania.onrender.com']  // Only allow these hosts in production
       : undefined,  // Allow all hosts in development
   };
 
