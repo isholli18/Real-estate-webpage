@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
+import tailwindTypography from "@tailwindcss/typography";
+import tailwindAnimate from "tailwindcss-animate";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -86,5 +88,7 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
+  plugins: [tailwindAnimate, tailwindTypography],
+};
+
+export default config;
