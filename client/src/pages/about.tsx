@@ -1,10 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { type Agent } from "@shared/schema";
+//import { useQuery } from "@tanstack/react-query";
+// import { type Agent } from "@shared/schema";
 
 export default function About() {
-  const { data: agents } = useQuery<Agent[]>({
-    queryKey: ["/api/agents"],
-  });
+//  const { data: agents } = useQuery<Agent[]>({
+//   queryKey: ["/api/agents"],
+// });
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">

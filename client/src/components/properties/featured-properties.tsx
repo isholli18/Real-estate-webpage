@@ -1,14 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
+//import { useQuery } from "@tanstack/react-query";
 import { PropertyCard } from "./property-card";
 import type { Property } from "@shared/schema";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { useCallback, useEffect, useState } from "react";
+import { data_properties } from "@server/data";
 
 export default function FeaturedProperties() {
-  const { data: properties, isLoading } = useQuery<Property[]>({
-    queryKey: ["/api/properties/featured"],
-  });
+  //const { data: properties, isLoading } = useQuery<Property[]>({
+   // queryKey: ["/api/properties/featured"],
+   const featuredProperties = data_properties.filter(property => property.featured);
+
 
   const autoplayOptions = {
     delay: 4000,
@@ -28,21 +30,11 @@ export default function FeaturedProperties() {
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
-  if (isLoading) {
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="h-96 bg-gray-100 animate-pulse rounded-lg" />
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {properties?.map((property) => (
+          {featuredProperties.map((property) => (
             <div key={property.id} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4">
               <PropertyCard property={property} featured={true} />
             </div>

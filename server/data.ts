@@ -8,20 +8,20 @@ export const data_properties = [
       bathrooms: 4,
       m2: 450,
       address: "Jale Beach, Albania",
-      images: ["/attached_assets/FM_outside_villa.png",
-       "/attached_assets/folie_marine_masterplan.png",
-        "/attached_assets/folie_marine_village.png",
-        "/attached_assets/FM_inside_villa.png",
-        "/attached_assets/FM_garden_villa.png",
-        "/attached_assets/FM_ground_floor.png",
-        "/attached_assets/FM_first_floor.png",
-        "/attached_assets/FM_first_floor_2.png",
-        "/attached_assets/FM_second_floor.png",
-        "/attached_assets/FM_p_ballore1.png",
-        "/attached_assets/FM_p_ballore2.png",
-        "/attached_assets/FM_fasada_jugore.png"
+      images: ["/images/FM_outside_villa.png",
+       "/images/folie_marine_masterplan.png",
+        "/images/folie_marine_village.png",
+        "/images/FM_inside_villa.png",
+        "/images/FM_garden_villa.png",
+        "/images/FM_ground_floor.png",
+        "/images/FM_first_floor.png",
+        "/images/FM_first_floor_2.png",
+        "/images/FM_second_floor.png",
+        "/images/FM_p_ballore1.png",
+        "/images/FM_p_ballore2.png",
+        "/images/FM_fasada_jugore.png"
       ],
-      featured: 1
+      featured: true
     },
     {
       id: 2,
@@ -32,17 +32,17 @@ export const data_properties = [
       bathrooms: null,
       m2: null,
       address: "Mahmut Fortuzi & Vilden Luarasi, Tirane",
-      images: ["/attached_assets/pallati.jpeg",
-         "/attached_assets/planimetri_kati1.png",
-         "/attached_assets/planimetri_kati2.png",
-         "/attached_assets/planimetri_kati3.png",
-         "/attached_assets/planimetri_kati4.png",
-         "/attached_assets/planimetri_kati5.png",
-         "/attached_assets/planimetri_kati6.png",
-         "/attached_assets/planimetri_kati7.png",
-         "/attached_assets/planimetri_kati8.png",
+      images: ["/images/pallati.jpeg",
+         "/images/planimetri_kati1.png",
+         "/images/planimetri_kati2.png",
+         "/images/planimetri_kati3.png",
+         "/images/planimetri_kati4.png",
+         "/images/planimetri_kati5.png",
+         "/images/planimetri_kati6.png",
+         "/images/planimetri_kati7.png",
+         "/images/planimetri_kati8.png",
         ],
-      featured: 1
+      featured: true
     },
     {
       id: 3,
@@ -53,16 +53,16 @@ export const data_properties = [
       bathrooms: 1,
       m2: null,
       address: "Tirana’s Dry Lake",
-      images: ["/attached_assets/3.jpg",
-         "/attached_assets/2.jpg",
-         "/attached_assets/1.jpg",
-         "/attached_assets/4.jpg",
-         "/attached_assets/d1.jpg",
-         "/attached_assets/d2.jpg",
-         "/attached_assets/veranda.jpg",
-         "/attached_assets/v2.jpg",
+      images: ["/images/3.jpg",
+         "/images/2.jpg",
+         "/images/1.jpg",
+         "/images/4.jpg",
+         "/images/d1.jpg",
+         "/images/d2.jpg",
+         "/images/veranda.jpg",
+         "/images/v2.jpg",
         ],
-      featured: 1
+      featured: true
     },
     {
       id: 4,
@@ -73,9 +73,9 @@ export const data_properties = [
       bathrooms: 1,
       m2: 40,
       address: "Bulevard Fan Noli, Korce, Albania",
-      images: ["/attached_assets/Korce-Albania.jpg",
-        "/attached_assets/pazari_korce.jpg"],
-      featured: 1
+      images: ["/images/Korce-Albania.jpg",
+        "/images/pazari_korce.jpg"],
+      featured: true
     },
     {
       id: 5,
@@ -86,11 +86,11 @@ export const data_properties = [
       bathrooms: null,
       m2: null,
       address: "Gjeneral's Beach, Kavaje, Albania",
-      images: ["/attached_assets/plazhi_gjeneralit_1.png",
-        "/attached_assets/plazhi_gjeneralit_2.png",
-      "/attached_assets/plazh_gjen.jpg"],
+      images: ["/images/plazhi_gjeneralit_1.png",
+        "/images/plazhi_gjeneralit_2.png",
+      "/images/plazh_gjen.jpg"],
 
-      featured: 1
+      featured: true
     },
     {
       id: 6,
@@ -101,10 +101,10 @@ export const data_properties = [
       bathrooms: null,
       m2: null,
       address: "Kallm, Durres, Albania",
-      images: ["/attached_assets/kallm-beach.jpg",
-        "/attached_assets/durres-beach-kallmi-bukur-1.jpg",
-      "/attached_assets/kallmi_beach.jpg"],
-      featured: 1
+      images: ["/images/kallm-beach.jpg",
+        "/images/durres-beach-kallmi-bukur-1.jpg",
+      "/images/kallmi_beach.jpg"],
+      featured: true
     },
     {
       id: 7,
@@ -115,10 +115,10 @@ export const data_properties = [
       bathrooms: null,
       m2: 250000,
       address: "Cape of Rodon, Durres, Albania",
-      images: ["/attached_assets/cape_rodon.jpg",
-        "/attached_assets/rodon.jpg",
-        "/attached_assets/Cape_of_Rodon.png"],
-      featured: 1
+      images: ["/images/cape_rodon.jpg",
+        "/images/rodon.jpg",
+        "/images/Cape_of_Rodon.png"],
+      featured: true
     },
     {
       id: 8,
@@ -129,10 +129,10 @@ export const data_properties = [
       bathrooms: null,
       m2: 170000,
       address: "Cape of Rodon, Durres, Albania",
-      images: ["/attached_assets/cape_rodon.jpg",
-        "/attached_assets/rodon.jpg",
-        "/attached_assets/Cape_of_Rodon.png"],
-      featured: 1
+      images: ["/images/cape_rodon.jpg",
+        "/images/rodon.jpg",
+        "/images/Cape_of_Rodon.png"],
+      featured: true
     },
     {
       id: 9,
@@ -143,10 +143,10 @@ export const data_properties = [
       bathrooms: null,
       m2: 100000,
       address: "Cape of Rodon, Durres, Albania",
-      images: ["/attached_assets/cape_rodon.jpg",
-        "/attached_assets/rodon.jpg",
-        "/attached_assets/Cape_of_Rodon.png"],
-      featured: 1
+      images: ["/images/cape_rodon.jpg",
+        "/images/rodon.jpg",
+        "/images/Cape_of_Rodon.png"],
+      featured: true
     }
     ,
     {
@@ -158,12 +158,12 @@ export const data_properties = [
       bathrooms: null,
       m2: 240000,
       address: "Karaburun Peninsula, Vlore, Albania",
-      images: ["/attached_assets/karaburunt_bay.jpg",
-        "/attached_assets/Karaburun-Peninsula-Albania-scaled.jpg",
-        "/attached_assets/karaburun-11.jpg",
-        "/attached_assets/Karaburun-penisula-Albania-819x1024.jpg",
-        "/attached_assets/karaburunt_peninsula.jpg"      ],
-      featured: 1
+      images: ["/images/karaburunt_bay.jpg",
+        "/images/Karaburun-Peninsula-Albania-scaled.jpg",
+        "/images/karaburun-11.jpg",
+        "/images/Karaburun-penisula-Albania-819x1024.jpg",
+        "/images/karaburunt_peninsula.jpg"      ],
+      featured: true
     }
   ];
   

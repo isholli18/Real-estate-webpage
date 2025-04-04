@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+//import { useQuery } from "@tanstack/react-query";
 import { useParams } from "wouter";
 import { type Property } from "@shared/schema";
 import { ImageGallery } from "@/components/ui/image-gallery";
@@ -18,7 +18,7 @@ import { insertInquirySchema } from "@shared/schema";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+//import { apiRequest } from "@/lib/queryClient";
 // import { mockProperties } from "@/lib/propertyData";
 import { data_properties } from "@server/data";
 
@@ -35,6 +35,7 @@ export default function Property() {
    // Use mockProperties to find the property by ID
    const property = data_properties.find((p) => p.id === Number(id));
 
+   
   const form = useForm({
     resolver: zodResolver(insertInquirySchema),
     defaultValues: {
@@ -47,28 +48,38 @@ export default function Property() {
   });
 
   const onSubmit = async (data: any) => {
-    try {
-      await apiRequest("POST", "/api/inquiries", data);
-      toast({
-        title: "Success",
-        description: "Your inquiry has been sent. We'll contact you soon!",
-      });
-      setInquiryOpen(false);
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send inquiry. Please try again.",
-        variant: "destructive",
-      });
-    }
+    // Replace API call with console log or email service
+    console.log('Inquiry data:', data);
+    toast({
+      title: "Success",
+      description: "Your inquiry has been received. We'll contact you soon!",
+    });
+    setInquiryOpen(false);
   };
+
+ // const onSubmit = async (data: any) => {
+  //  try {
+   //   await apiRequest("POST", "/api/inquiries", data);
+   //   toast({
+   //     title: "Success",
+    //    description: "Your inquiry has been sent. We'll contact you soon!",
+    //  });
+    //  setInquiryOpen(false);
+   // } catch (error) {
+    //  toast({
+    //    title: "Error",
+    //    description: "Failed to send inquiry. Please try again.",
+     //   variant: "destructive",
+     // });
+    //}
+ // };
 
   // if (isLoading) {
   //   return <div className="h-96 animate-pulse bg-gray-100" />;
   // }
 
   if (!property) {
-    return <div>Property not found</div>;
+    return <div className="max-w-7xl mx-auto px-4 py-12">Property not found</div>;
   }
 
   return (

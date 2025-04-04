@@ -10,7 +10,7 @@ export interface Property {
   m2: number | null;
   address: string;
   images: string[];
-  featured: number;
+  featured: boolean;
 }
 
 export interface Agent {
@@ -54,7 +54,7 @@ export class StaticStorage implements IStorage {
   }
 
   async getFeaturedProperties(): Promise<Property[]> {
-    return data_properties.filter(p => p.featured === 1);
+    return data_properties.filter(p => p.featured === true);
   }
 
   async getAgents(): Promise<Agent[]> {

@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import {
   Form,
   FormControl,
@@ -21,21 +20,16 @@ export default function Contact() {
     resolver: zodResolver(insertInquirySchema.omit({ propertyId: true })),
   });
 
-  const onSubmit = async (data: any) => {
-    try {
-      await apiRequest("POST", "/api/inquiries", data);
-      toast({
-        title: "Success",
-        description: "Your message has been sent. We'll contact you soon!",
-      });
-      form.reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    }
+  const onSubmit = (data: any) => {
+    // Simple form handling without API
+    console.log('Form submitted:', data);
+    toast({
+      title: "Success",
+      description: "Your message has been received. We'll contact you soon!",
+    });
+    form.reset();
+    
+    // Optional: Add email sending logic here or integrate with Formspree
   };
 
   return (

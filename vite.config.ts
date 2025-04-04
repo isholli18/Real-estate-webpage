@@ -6,6 +6,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import { glob } from "glob"; // Add this import
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,10 +25,23 @@ export default defineConfig({
       "@server": path.resolve(__dirname, "server"),
     },
   },
-  base: "./", // 👈 Ensures GitHub Pages uses relative paths
-  root: path.resolve(__dirname, "client"), // 👈 Dev server starts from /client
+  base: "./",
+  root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "dist/public"), // 👈 Builds into /dist (not /dist/public)
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    assetsInlineLimit: 0, // Ensure all assets are copied as files
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Organize assets by type
+          if (/\.(jpg|jpeg|png|gif|svg|webp)$/.test(assetInfo.name || "")) {
+            return "images/[name]-[hash][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
+        },
+      },
+    },
   },
+  publicDir: path.resolve(__dirname, "client/public"), // Explicit public directory
 });

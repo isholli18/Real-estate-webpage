@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+//import { useQuery } from "@tanstack/react-query";
 import FeaturedProperties from "@/components/properties/featured-properties";
 import { Services } from "@/components/home/services";
 import { KeyAdvantages } from "@/components/home/key-advantages";
@@ -10,9 +10,9 @@ import { ArrowRight } from "lucide-react";
 import { type Agent } from "@shared/schema";
 
 export default function Home() {
-  const { data: agents } = useQuery<Agent[]>({
-    queryKey: ["/api/agents"],
-  });
+  //const { data: agents } = useQuery<Agent[]>({
+  //  queryKey: ["/api/agents"],
+  // });
 
   return (
     <div>

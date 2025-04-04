@@ -11,7 +11,7 @@ export const propertySchema = z.object({
   m2: z.number().nullable(),
   address: z.string().nullable(),
   images: z.array(z.string()),
-  featured: z.number()
+  featured: z.boolean()
 });
 
 export const insertPropertySchema = propertySchema.omit({ id: true });
