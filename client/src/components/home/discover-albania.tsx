@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Card } from "@/components/ui/card";
-import airAlbania from '@/images/air_albania.jpg';
-import gjirokaster from '@/images/Gjirokaster-bazaar.jpg';
-import korce from '@/images/Korce-Albania.jpg';
-import kep_merli from '@/images/kep_merli.jpg';
-import tirana from '@/images/Tirana.jpg';
-import ksamil from '@/images/ksamilit.jpg';
-import theth from '@/images/theth.jpg';
+import airAlbania from '/images/air_albania.jpg';
+import gjirokaster from '/images/Gjirokaster-bazaar.jpg';
+import korce from '/images/Korce-Albania.jpg';
+import kep_merli from '/images/kep_merli.jpg';
+import tirana from '/images/Tirana.jpg';
+import ksamil from '/images/ksamilit.jpg';
+import theth from '/images/theth.jpg';
 
 
 const albanianLocations = [

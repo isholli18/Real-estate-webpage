@@ -2,11 +2,26 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/attached_assets', express.static('attached_assets'));
+
+//app.use('/attached_assets', express.static('attached_assets'));
+
+const staticConfig = {
+  maxAge: app.get("env") === "production" ? "1y" : "0", // Cache in production
+  setHeaders: (res: Response) => {
+    res.set("X-Content-Type-Options", "nosniff");
+  }
+};
+
+// Serve static files from public folder
+app.use('/images', express.static(
+  path.join(__dirname, '../client/public/images'),
+  staticConfig
+));
 
 app.use((req, res, next) => {
   const start = Date.now();
