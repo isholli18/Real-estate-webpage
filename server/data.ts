@@ -33,6 +33,14 @@ export const data_properties = [
       m2: null,
       address: "Mahmut Fortuzi & Vilden Luarasi, Tirane",
       images: ["/images/pallati.jpeg",
+         "/images/app2+1.png",
+         "/images/render2+1_dhome_gjumi.png",
+         "/images/render_2+1_living.png",
+         "/images/app_2+1_jug.png",
+         "/images/render_2+1_jug.png",
+         "/images/render_2+1_jug_living.png",
+         "/images/app_1+1.png",
+         "/images/render_1+1_iving.png",
          "/images/planimetri_kati1.png",
          "/images/planimetri_kati2.png",
          "/images/planimetri_kati3.png",
@@ -46,39 +54,6 @@ export const data_properties = [
     },
     {
       id: 3,
-      title: "Modern 1+1 Apartment for Sale in Tirana’s Dry Lake",
-      description: "Located in one of Tirana’s most desirable neighborhoods, this modern 1+1 apartment offers a spacious and stylish living environment. Featuring a cool-toned interior, the apartment is perfect for a small family looking for comfort and functionality. It includes one bedroom, one bathroom, an open-plan living room with a kitchen, and a cozy balcony. Fully furnished and designed for a warm, inviting atmosphere, this apartment provides a perfect blend of modern aesthetics and homey comfort.",
-      price: "200000 €",
-      bedrooms: 1,
-      bathrooms: 1,
-      m2: null,
-      address: "Tirana’s Dry Lake",
-      images: ["/images/3.jpg",
-         "/images/2.jpg",
-         "/images/1.jpg",
-         "/images/4.jpg",
-         "/images/d1.jpg",
-         "/images/d2.jpg",
-         "/images/veranda.jpg",
-         "/images/v2.jpg",
-        ],
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Modern 1+1 Apartment for Sale in Korce",
-      description: "Located in the center of Korça, right next to Themistokli Germenji High School, this charming 40 m² apartment offers an ideal living space. Situated on the sixth floor of a residential building, it is close to a beautiful park and just steps away from the Old Bazaar, one of the city's most iconic attractions.This newly renovated 1+1 apartment has been fully furnished with modern investments in recent years and comes with full property ownership documentation (tapi). The building has the potential for an elevator installation, with full agreement from all residents.",
-      price: "52000 €",
-      bedrooms: 1,
-      bathrooms: 1,
-      m2: 40,
-      address: "Bulevard Fan Noli, Korce, Albania",
-      images: ["/images/Korce-Albania.jpg",
-        "/images/pazari_korce.jpg"],
-      featured: true
-    },
-    {
-      id: 5,
       title: "Parcel for sale at Gjeneral's Beach, Kavaje",
       description: "",
        price: "60€/m²",
@@ -93,7 +68,7 @@ export const data_properties = [
       featured: true
     },
     {
-      id: 6,
+      id: 4,
       title: "Parcel for sale at Kallm, Durres       ",
       description: "",
       price: "50€/m²",
@@ -107,7 +82,7 @@ export const data_properties = [
       featured: true
     },
     {
-      id: 7,
+      id: 5,
       title: "Parcel for sale at Cape of Rodon, Durres",
       description: "",
       price: "15000000€",
@@ -121,7 +96,7 @@ export const data_properties = [
       featured: true
     },
     {
-      id: 8,
+      id: 6,
       title: "Parcel for sale at Cape of Rodon, Durres",
       description: "",
       price: "10200000€",
@@ -135,7 +110,7 @@ export const data_properties = [
       featured: true
     },
     {
-      id: 9,
+      id: 7,
       title: "Parcel for sale at Cape of Rodon, Durres",
       description: "",
       price: "6000000€",
@@ -150,7 +125,7 @@ export const data_properties = [
     }
     ,
     {
-      id: 10,
+      id: 8,
       title: "Parcel for sale at Karaburun Peninsula, Vlore",
       description: "",
       price: "12000000€",
