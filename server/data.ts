@@ -27,7 +27,7 @@ export const data_properties = [
       id: 2,
       title: "Modern Apartments in the heart of Tirana city",
       description: "This modern residential and service building is currently under construction in Tirana, located on Mahmut Fortuzi and Vildan Luarasi streets. The development features 5, 6, 7, 8, and 9 floors above ground, along with 2 underground parking levels, offering a perfect blend of residential comfort and commercial functionality. Designed with contemporary architecture and high-quality materials, this building provides a prime investment opportunity in one of Tirana’s most sought-after locations. We offer various apartments for sale, including 1+1, 2+1, and luxurious penthouse units,starting at a price of €2,500 per square meter. Additionally, commercial spaces are available starting at €3,300 per square meter, making this an ideal opportunity for both homeowners and business investors. Whether you’re looking for a cozy apartment or a commercial space in a prime urban area, this development offers elegance, convenience, and modern city living.",
-      price: "2500 - 3300 €/m²",
+      price: "2800 - 3500 €/m²",
       bedrooms: null,
       bathrooms: null,
       m2: null,
